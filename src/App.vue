@@ -85,14 +85,14 @@ const frases = [
 <template>
   <h1>Frases celebres</h1>
   <!-- OJO se usan comillas dobles. Recorre el objeto o la matriz. por cada obejeto que ya existe lo recorre
-    Repite el bucle 13 frases porque son las frases que hay. 'frase' es una variable. Si yo no quiero todo el objeto sino 
-    solo una partes se puede desestructurar con {}
-    Puedo quitar 'tema y puedo poner autor antes, no importa el orden' 
-  Si yo quiero cambiar 'frase por otro nombre puedo poner frase:cita'-->
+          Repite el bucle 13 frases porque son las frases que hay. 'frase' es una variable. Si yo no quiero todo el objeto sino 
+          solo una partes se puede desestructurar con {}
+          Puedo quitar 'tema y puedo poner autor antes, no importa el orden' 
+        Si yo quiero cambiar 'frase por otro nombre puedo poner frase:cita'-->
   <ul>
-    <li v-for="{ frase: cita, autor, tema } in frases">
-      <span>{{ cita }}</span>
-      <blockquote> - {{ autor }}</blockquote>
+    <li v-for="( frase, index ) in frases">
+      <span>({{ index + 1 }}){{ frase.frase }}</span>
+      <blockquote> - {{ frase.autor }}</blockquote>
     </li>
   </ul>
 </template>

@@ -86,9 +86,9 @@ const frases = [
   <h1>Frases celebres</h1>
   <ul>
     <li v-for="frase in frases"> <!-- OJO se usan comillas dobles. Recorre el objeto o la matriz. por cada obejeto que ya existe lo recorre
-      Repite el bucle 13 frases porque son las frases que hay. 'frase' es una variable-->
-      <span>{{ frases[0].frase }}</span> <!-- al ser un objeto hay que poner el '. frase'-->
-      <blockquote> - {{ frases[0].autor }}</blockquote>
+        Repite el bucle 13 frases porque son las frases que hay. 'frase' es una variable-->
+      <span>{{ frase.frase }}</span> <!-- al ser un objeto hay que poner el '. frase'-->
+      <blockquote> - {{ frase.autor }}</blockquote>
     </li>
   </ul>
 </template>
